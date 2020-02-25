@@ -37,6 +37,7 @@ public class CelebrityGame
 		gameWindow.replaceScreen("START");
 	}
 	
+	//Closes the current game window. Used for the reset button functionality under CelebrityPanel
 	public void closeGame()
 	{
 		gameWindow.dispose();
