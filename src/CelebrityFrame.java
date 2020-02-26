@@ -64,7 +64,6 @@ public class CelebrityFrame extends JFrame
 		
 	
 	}
-	
 	/**
 	 * Configures the JFrame window subclass to add the panel and set size based information.
 	 */
