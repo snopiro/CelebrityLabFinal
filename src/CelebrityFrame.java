@@ -51,12 +51,15 @@ public class CelebrityFrame extends JFrame
 		controller = controllerRef;
 		startPanel = new StartPanel(controller);
 		gamePanel = new CelebrityPanel(controller);
+		
+		//CardLayout functionality - works but doesnt add the first clue
 //		panelCards = new JPanel(new CardLayout());
 //		cardLayout = new CardLayout();
 //		panelCards = (JPanel) this.getContentPane();
 //	    panelCards.setLayout(cardLayout);
 //		panelCards.add(startPanel, START_PANEL);
 //		panelCards.add(gamePanel, GAME_PANEL);
+		
 		setupFrame();	
 		
 	
