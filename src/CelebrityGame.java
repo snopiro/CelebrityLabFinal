@@ -101,9 +101,18 @@ public class CelebrityGame
 	 */
 	public void addCelebrity(String name, String guess, String type)
 	{
-		if(validateCelebrity(name) && validateClue(guess, ""))
-			celebGameList.add(new Celebrity(name, guess));
+		if(validateCelebrity(name) && validateClue(guess, "")) {
+			
+			if(type.equals("Celebrity"))
+				celebGameList.add(new Celebrity(name, guess));
+			else if(guess.indexOf(',') != -1 && type.equals("Literature"))
+				celebGameList.add(new LiteratureCelebrity(name, guess.substring(0, guess.indexOf(',')), guess.substring(guess.indexOf(','))));
+			else
+				celebGameList.add(new LiteratureCelebrity(name, guess, ""));
+		}
+			
 	}
+	
 
 	/**
 	 * Validates the name of the celebrity. It must have at least 4 characters.

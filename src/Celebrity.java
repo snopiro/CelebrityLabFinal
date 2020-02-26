@@ -20,7 +20,7 @@ public class Celebrity
 	 */
 	public Celebrity(String answer, String clue)
 	{
-		name = answer;
+		this.name = answer;
 		this.clue = clue;
 	}
 

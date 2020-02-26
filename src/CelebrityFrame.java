@@ -81,6 +81,7 @@ public class CelebrityFrame extends JFrame
 	public void replaceScreen(String screen)
 	{
 		cardLayout.show(panelCards, screen);
+		
 	}
 	
 }
