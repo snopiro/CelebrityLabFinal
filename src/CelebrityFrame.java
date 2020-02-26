@@ -51,12 +51,12 @@ public class CelebrityFrame extends JFrame
 		controller = controllerRef;
 		startPanel = new StartPanel(controller);
 		gamePanel = new CelebrityPanel(controller);
-		panelCards = new JPanel(new CardLayout());
-		cardLayout = new CardLayout();
-		panelCards = (JPanel) this.getContentPane();
-	    panelCards.setLayout(cardLayout);
-		panelCards.add(startPanel, START_PANEL);
-		panelCards.add(gamePanel, GAME_PANEL);
+//		panelCards = new JPanel(new CardLayout());
+//		cardLayout = new CardLayout();
+//		panelCards = (JPanel) this.getContentPane();
+//	    panelCards.setLayout(cardLayout);
+//		panelCards.add(startPanel, START_PANEL);
+//		panelCards.add(gamePanel, GAME_PANEL);
 		setupFrame();	
 		
 	
@@ -80,7 +80,18 @@ public class CelebrityFrame extends JFrame
 	 */
 	public void replaceScreen(String screen)
 	{
-		cardLayout.show(panelCards, screen);
+		
+		//cardLayout.show(panelCards, screen);
+		
+		if(screen.equals("GAME")) {
+			remove(startPanel);
+			add(gamePanel);
+			gamePanel.addClue(controller.sendClue());
+		}
+		else if(screen.equals("START")){
+			super.remove(gamePanel);
+			add(startPanel);
+		}
 		
 	}
 	

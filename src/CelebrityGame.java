@@ -80,6 +80,7 @@ public class CelebrityGame
 			gameCelebrity = celebGameList.get(0);
 			gameWindow.replaceScreen("GAME");
 			
+			
 		}
 		else {
 			

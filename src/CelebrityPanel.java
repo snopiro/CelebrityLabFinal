@@ -118,6 +118,7 @@ public class CelebrityPanel extends JPanel
     setupLayout();
     setupListeners();
     
+    
   }
   
   /**
