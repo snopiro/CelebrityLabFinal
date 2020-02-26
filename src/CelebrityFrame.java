@@ -52,7 +52,7 @@ public class CelebrityFrame extends JFrame
 		startPanel = new StartPanel(controller);
 		gamePanel = new CelebrityPanel(controller);
 		
-		//CardLayout functionality - works but doesnt add the first clue
+		//CardLayout functionality - works in switching the screens but doesnt add the first clue
 //		panelCards = new JPanel(new CardLayout());
 //		cardLayout = new CardLayout();
 //		panelCards = (JPanel) this.getContentPane();
