@@ -117,6 +117,7 @@ public class CelebrityPanel extends JPanel
     setupPanel();
     setupLayout();
     setupListeners();
+    
   }
   
   /**
@@ -193,7 +194,8 @@ public class CelebrityPanel extends JPanel
                                     {
       public void actionPerformed(ActionEvent mouseClick)
       {
-    	controller.closeGame();
+    	if(controller.getCelebrityGameSize() == 0)
+    		controller.closeGame();
         controller.play();
       }
     });

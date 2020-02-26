@@ -83,5 +83,4 @@ public class CelebrityFrame extends JFrame
 		cardLayout.show(panelCards, screen);
 	}
 	
-	
 }
